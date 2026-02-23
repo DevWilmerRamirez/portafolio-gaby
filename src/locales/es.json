@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "experience": "Experiencia",
+    "portfolio": "Portafolio",
+    "testimonials": "Testimonios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Media Buyer & Especialista en Ads",
+    "greeting": "Hola,",
+    "im": "Soy",
+    "name": "Gaby",
+    "description": "Elevando marcas con campañas estratégicas y dominio de redes sociales.",
+    "cta_work": "Ver mi Trabajo",
+    "cta_contact": "Contáctame",
+    "stat_years": "Años de Experiencia",
+    "stat_clients": "Clientes Felices"
+  },
+  "services": {
+    "section_badge": "Lo Que Hago",
+    "section_title": "Mis Servicios",
+    "section_desc": "Soluciones completas de marketing digital diseñadas para hacer crecer tu negocio y mejorar tu presencia online.",
+    "items": [
+      {
+        "title": "Facebook Ads",
+        "desc": "Campañas publicitarias dirigidas que convierten. Desde investigación de audiencia hasta estrategias de retargeting y optimización de ROAS."
+      },
+      {
+        "title": "Google Ads",
+        "desc": "Maximiza la visibilidad con campañas de búsqueda de alta intención, redes de display y publicidad en YouTube."
+      },
+      {
+        "title": "Estrategia de Redes Sociales",
+        "desc": "Planificación integral para alinear el contenido social con tus objetivos comerciales y la voz de tu marca."
+      },
+      {
+        "title": "Gestión de Comunidades",
+        "desc": "Interactuar con tu audiencia, gestionar consultas y construir una comunidad leal alrededor de tu marca."
+      },
+      {
+        "title": "Diseño de Contenido",
+        "desc": "Creación de publicaciones e historias visualmente impactantes utilizando herramientas como Canva y Photoshop."
+      },
+      {
+        "title": "Métricas y Reportes",
+        "desc": "Insights basados en datos con informes mensuales detallados para rastrear el crecimiento y el rendimiento de las campañas."
+      }
+    ]
+  },
+  "experience": {
+    "section_badge": "Trayectoria",
+    "section_title": "Mi Experiencia Laboral",
+    "roles": [
+      {
+        "title": "Senior Media Buyer",
+        "company": "Agencia XYZ",
+        "period": "2023 - Presente",
+        "desc": "Gestión de más de $50k en inversión publicitaria mensual en plataformas Meta y Google. Logrando una mejora constante del ROAS para clientes de comercio electrónico."
+      },
+      {
+        "title": "Social Media Manager",
+        "company": "Freelance",
+        "period": "2021 - 2023",
+        "desc": "Gestión full-stack de redes sociales para más de 10 clientes. Estrategia de contenido, compromiso con la comunidad y growth hacking."
+      },
+      {
+        "title": "Especialista en Marketing Digital",
+        "company": "Marca Local",
+        "period": "2019 - 2021",
+        "desc": "Lideré iniciativas de transformación digital, incluyendo optimización SEO y campañas de email marketing."
+      }
+    ]
+  },
+  "portfolio": {
+     "section_badge": "Portafolio",
+     "section_title": "Trabajos Recientes",
+     "section_desc": "Mira algunos proyectos seleccionados donde ayudé a marcas a crecer su presencia online.",
+     "view_all": "Ver Todos",
+     "items": [
+        {
+          "title": "Escalado de E-commerce",
+          "category": "Facebook Ads",
+          "stats": "350% ROAS"
+        },
+        {
+          "title": "Campaña de Reconocimiento",
+          "category": "Gestión de Redes Sociales",
+          "stats": "+10k Seguidores"
+        },
+        {
+          "title": "Generación de Leads Inmobiliarios",
+          "category": "Google Ads",
+          "stats": "$15 CPL"
+        },
+        {
+          "title": "Lanzamiento de Moda de Lujo",
+          "category": "Estrategia Completa",
+          "stats": "Lanzamiento Sold Out"
+        }
+     ]
+  },
+  "testimonials": {
+    "section_badge": "Testimonios",
+    "section_title": "Lo Que Dicen",
+    "items": [
+      {
+        "name": "Sarah Johnson",
+        "role": "CEO, Marca de Moda",
+        "content": "Gaby transformó nuestra estrategia publicitaria por completo. Vimos un aumento de 3x en el ROAS en el primer mes. Su experiencia en Facebook Ads es inigualable."
+      },
+      {
+        "name": "Michael Chen",
+        "role": "Fundador, Startup Tech",
+        "content": "La gestión de la comunidad y el diseño de contenido proporcionados por Gaby le han dado a nuestra marca una voz profesional y atractiva. ¡Altamente recomendada!"
+      },
+      {
+        "name": "Emily Davis",
+        "role": "Directora de Marketing",
+        "content": "Trabajar con Gaby es muy fácil. Se basa en datos, es creativa y siempre entrega a tiempo. Sus informes mensuales brindan información clara sobre nuestro crecimiento."
+      }
+    ]
+  },
+  "contact": {
+    "section_badge": "Conversemos",
+    "section_title": "Creemos Algo Increíble Juntos",
+    "section_desc": "¿Listo para escalar tu negocio con estrategias expertas de compra de medios y redes sociales? Hablemos de tus objetivos.",
+    "email_title": "Envíame un Correo",
+    "call_title": "Llámame",
+    "location_title": "Ubicación",
+    "location_val": "Remoto / Mundial",
+    "form_title": "Enviar Mensaje",
+    "label_name": "Nombre",
+    "label_email": "Correo",
+    "label_subject": "Asunto",
+    "label_message": "Mensaje",
+    "placeholder_name": "Juan Pérez",
+    "placeholder_email": "juan@ejemplo.com",
+    "placeholder_subject": "Consulta de Proyecto",
+    "placeholder_message": "Cuéntame sobre tu proyecto...",
+    "btn_submit": "Enviar Mensaje"
+  },
+  "footer": {
+    "role": "Media Buyer Profesional y Especialista en Ads",
+    "rights": "Hecho con <1>❤</1> por Gaby"
+  }
+}

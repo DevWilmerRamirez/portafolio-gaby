@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "experience": "Experience",
+    "portfolio": "Work",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Media Buyer & Ads Specialist",
+    "greeting": "Hey There,",
+    "im": "I'm",
+    "name": "Gaby",
+    "description": "Elevating brands with strategic ad campaigns and social media mastery.",
+    "cta_work": "View My Work",
+    "cta_contact": "Contact Me",
+    "stat_years": "Years Experience",
+    "stat_clients": "Happy Clients"
+  },
+  "services": {
+    "section_badge": "What I Do",
+    "section_title": "My Services",
+    "section_desc": "Complete digital marketing solutions tailored to grow your business and enhance your online presence.",
+    "items": [
+      {
+        "title": "Facebook Ads",
+        "desc": "Targeted ad campaigns that convert. From audience research to retargeting strategies and ROAS optimization."
+      },
+      {
+        "title": "Google Ads",
+        "desc": "Maximize visibility with high-intent search campaigns, display networks, and YouTube advertising."
+      },
+      {
+        "title": "Social Media Strategy",
+        "desc": "Comprehensive planning to align social content with your business goals and brand voice."
+      },
+      {
+        "title": "Community Management",
+        "desc": "Engaging with your audience, handling inquiries, and building a loyal community around your brand."
+      },
+      {
+        "title": "Content Design",
+        "desc": "Creating visually stunning posts and stories using tools like Canva and Photoshop."
+      },
+      {
+        "title": "Metrics & Reporting",
+        "desc": "Data-driven insights with detailed monthly reports to track growth and campaign performance."
+      }
+    ]
+  },
+  "experience": {
+    "section_badge": "Career Path",
+    "section_title": "My Working Experience",
+    "roles": [
+      {
+        "title": "Senior Media Buyer",
+        "company": "Agency XYZ",
+        "period": "2023 - Present",
+        "desc": "Managing $50k+ monthly ad spend across Meta and Google platforms. Achieving constant ROAS improvement for e-commerce clients."
+      },
+      {
+        "title": "Social Media Manager",
+        "company": "Freelance",
+        "period": "2021 - 2023",
+        "desc": "Full-stack social media management for 10+ clients. Content strategy, community engagement, and growth hacking."
+      },
+      {
+        "title": "Digital Marketing Specialist",
+        "company": "Local Brand",
+        "period": "2019 - 2021",
+        "desc": "Led digital transformation initiatives, including SEO optimization and email marketing campaigns."
+      }
+    ]
+  },
+  "portfolio": {
+     "section_badge": "Portfolio",
+     "section_title": "My Latest Work",
+     "section_desc": "Check out some select projects where I've helped brands grow their online presence.",
+     "view_all": "See All Projects",
+     "items": [
+        {
+          "title": "E-commerce Scale Up",
+          "category": "Facebook Ads",
+          "stats": "350% ROAS"
+        },
+        {
+          "title": "Brand Awareness Campaign",
+          "category": "Social Media Management",
+          "stats": "+10k Followers"
+        },
+        {
+          "title": "Lead Gen for Real Estate",
+          "category": "Google Ads",
+          "stats": "$15 CPL"
+        },
+        {
+          "title": "Luxury Fashion Launch",
+          "category": "Full Strategy",
+          "stats": "Sold Out Launch"
+        }
+     ]
+  },
+  "testimonials": {
+    "section_badge": "Testimonials",
+    "section_title": "What People Say",
+    "items": [
+      {
+        "name": "Sarah Johnson",
+        "role": "CEO, Fashion Brand",
+        "content": "Gaby transformed our ad strategy completely. We saw a 3x increase in ROAS within the first month. Her expertise in Facebook Ads is unmatched."
+      },
+      {
+        "name": "Michael Chen",
+        "role": "Founder, Tech Startup",
+        "content": "The community management and content design provided by Gaby has given our brand a professional and engaging voice. Highly recommended!"
+      },
+      {
+        "name": "Emily Davis",
+        "role": "Marketing Director",
+        "content": "Working with Gaby is a breeze. She is data-driven, creative, and always delivers on time. Her monthly reports provide clear insights into our growth."
+      }
+    ]
+  },
+  "contact": {
+    "section_badge": "Get in touch",
+    "section_title": "Let's Make Something Amazing Together",
+    "section_desc": "Ready to scale your business with expert media buying and social media strategies? Let's chat about your goals.",
+    "email_title": "Email Me",
+    "call_title": "Call Me",
+    "location_title": "Location",
+    "location_val": "Remote / Worldwide",
+    "form_title": "Send a Message",
+    "label_name": "Name",
+    "label_email": "Email",
+    "label_subject": "Subject",
+    "label_message": "Message",
+    "placeholder_name": "John Doe",
+    "placeholder_email": "john@example.com",
+    "placeholder_subject": "Project Inquiry",
+    "placeholder_message": "Tell me about your project...",
+    "btn_submit": "Send Message"
+  },
+  "footer": {
+    "role": "Professional Media Buyer & Ads Specialist",
+    "rights": "Made with <1>❤</1> by Gaby"
+  }
+}
