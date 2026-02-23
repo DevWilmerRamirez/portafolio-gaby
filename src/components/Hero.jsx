@@ -2,6 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import shape1 from '../assets/shape1.png';
+import gaby3 from '../assets/gaby3.jpg';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -40,7 +42,7 @@ const Hero = () => {
         <div className="col-span-1 lg:col-span-7 h-[50vh] lg:h-screen flex justify-center items-center lg:items-center min-[1440px]:items-end relative order-2 lg:order-none lg:col-start-6 lg:row-span-2 mt-4 mb-4 lg:mt-0 lg:mb-0">
            {/* Background Brush Shape */}
            <img
-              src="/assets/shape1.png"
+              src={shape1}
               alt=""
               className="absolute top-1/2 left-1/2 min-[1440px]:top-auto min-[1440px]:left-auto min-[1440px]:bottom-0 min-[1440px]:left-0 transform -translate-x-1/2 -translate-y-1/2 min-[1440px]:translate-x-0 min-[1440px]:translate-y-0 w-[140%] md:w-[100%] lg:w-[120%] h-auto object-contain -z-10 opacity-60 mix-blend-screen max-w-none"
             />
@@ -59,7 +61,7 @@ const Hero = () => {
                 min-[1440px]:w-auto min-[1440px]:h-[90%]
             `}>
               <img
-                src="/assets/gaby3.jpg"
+                src={gaby3}
                 alt="Gaby - Media Buyer"
                 className={`
                   object-contain drop-shadow-2xl
