@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <section id="contacto" className="bg-wine-dark py-24 px-[6vw] text-center relative overflow-hidden">
       {/* Decorative background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_50%_50%,rgba(232,160,168,0.12)_0%,transparent_60%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_50%_50%,#E8A0A81F_0%,transparent_60%)] pointer-events-none"></div>
 
       <div className="relative z-10">
         <h2 className="font-playfair text-clamp-h1 font-black text-white leading-tight mb-4">

@@ -42,5 +42,6 @@ export default {
         'fade-up': 'fadeUp 0.7s ease both',
       },
     },
+  },
   plugins: [],
 }

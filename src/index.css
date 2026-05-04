@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
 
+:root {
+  --wine: #6B1A2A;
+  --wine-dark: #4A1020;
+  --wine-light: #8C2238;
+  --pink: #E8A0A8;
+  --pink-light: #F5D5D9;
+  --pink-bg: #FBF0F1;
+  --cream: #FDF7F0;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

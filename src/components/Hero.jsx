@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-[6vw] pt-[100px] pb-[60px] gap-16 relative overflow-hidden bg-cream">
       {/* Decorative gradient */}
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_60%_at_70%_40%,theme(colors.pink.light)_0%,transparent_60%)]"></div>
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_60%_at_70%_40%,#F5D5D9_0%,transparent_60%)]"></div>
 
       <div className="relative z-10 animate-fade-up">
         <div className="inline-flex items-center gap-2 bg-pink-light border border-pink rounded-full px-4 py-1.5 text-[0.78rem] font-semibold text-wine tracking-widest uppercase mb-6">

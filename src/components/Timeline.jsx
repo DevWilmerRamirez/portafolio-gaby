@@ -26,7 +26,7 @@ const TimelineItem = ({ item, isFirst }) => {
       ref={itemRef}
       className="relative pl-10 pb-10 opacity-0 -translate-x-5 transition-all duration-700 ease-out"
     >
-      <div className={`absolute left-[-8px] top-1.5 w-4 h-4 rounded-full border-4 border-cream z-10 ${item.current ? 'bg-pink shadow-[0_0_0_2px_theme(colors.pink),0_0_12px_theme(colors.pink)]' : 'bg-wine-light shadow-[0_0_0_2px_theme(colors.wine.light)]'}`}>
+      <div className={`absolute left-[-8px] top-1.5 w-4 h-4 rounded-full border-4 border-cream z-10 ${item.current ? 'bg-pink shadow-[0_0_0_2px_#E8A0A8,0_0_12px_#E8A0A8]' : 'bg-wine-light shadow-[0_0_0_2px_#8C2238]'}`}>
       </div>
       
       {item.current && (

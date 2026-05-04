@@ -11,7 +11,7 @@ const Metrics = () => {
   return (
     <section id="resultados" className="py-24 px-[6vw] bg-wine-dark relative overflow-hidden">
       {/* Decorative background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_80%_50%,rgba(232,160,168,0.1)_0%,transparent_60%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_80%_50%,#E8A0A81A_0%,transparent_60%)] pointer-events-none"></div>
 
       <div className="mb-14 relative z-10">
         <div className="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-pink mb-3">
