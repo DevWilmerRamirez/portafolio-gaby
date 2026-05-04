@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +9,6 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply antialiased;
+    @apply antialiased bg-cream text-text font-sans overflow-x-hidden;
   }
 }

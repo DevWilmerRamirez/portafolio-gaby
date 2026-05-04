@@ -1,82 +1,86 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Facebook, Search, Layout, Users, BarChart3, PenTool } from 'lucide-react';
-import { motion } from 'framer-motion';
-
-const staticServiceData = [
-  {
-    icon: <Facebook size={32} />,
-    color: 'bg-blue-600'
-  },
-  {
-    icon: <Search size={32} />,
-    color: 'bg-green-600'
-  },
-  {
-    icon: <Layout size={32} />,
-    color: 'bg-purple-primary'
-  },
-  {
-    icon: <Users size={32} />,
-    color: 'bg-pink-500'
-  },
-  {
-    icon: <PenTool size={32} />,
-    color: 'bg-orange-500'
-  },
-  {
-    icon: <BarChart3 size={32} />,
-    color: 'bg-indigo-600'
-  }
-];
 
 const Services = () => {
-  const { t } = useTranslation();
+  const painPoints = [
+    'Inviertes en ADS pero no ves el retorno esperado',
+    'Tu costo por resultado sube y no sabes por qué',
+    'Tienes campañas activas pero sin estrategia real',
+    'Quieres escalar pero no sabes por dónde empezar',
+    'Mides impresiones pero no conversiones reales',
+    'Tu equipo no tiene claridad sobre qué métricas importan',
+  ];
 
-  // Merge translated text with static icons/colors
-  // We use safeguard '|| []' to prevent errors if translation isn't loaded yet
-  const serviceItems = (t('services.items', { returnObjects: true }) || []).map((item, index) => ({
-    ...item,
-    ...(staticServiceData[index] || {})
-  }));
+  const serviceCards = [
+    {
+      icon: '📊',
+      name: 'Gestión de campañas',
+      desc: 'Meta Ads y Google Ads con estrategia, ejecución y optimización continua. Cada peso invertido debe trabajar de verdad.',
+      tag: 'Meta Ads · Google Ads'
+    },
+    {
+      icon: '🔍',
+      name: 'Auditoría publicitaria',
+      desc: 'Revisión completa de tus campañas actuales. Identifico exactamente qué falla y qué oportunidades estás dejando pasar.',
+      tag: 'Diagnóstico completo'
+    },
+    {
+      icon: '🎯',
+      name: 'Consultoría estratégica',
+      desc: 'Sesión 1:1 para definir tu estrategia de pauta, presupuesto óptimo y métricas de éxito alineadas a tu negocio.',
+      tag: 'Sesión 1:1'
+    },
+    {
+      icon: '🚀',
+      name: 'Mentoría en ADS',
+      desc: 'Acompaño a tu equipo para que aprenda a gestionar y optimizar sus propias campañas con criterio propio.',
+      tag: 'Equipos y freelancers'
+    }
+  ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-purple-primary font-bold tracking-wider uppercase text-sm">
-            {t('services.section_badge')}
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-wine">
-             {t('services.section_title')}
-          </h2>
-          <p className="text-gray-600 text-lg">
-             {t('services.section_desc')}
-          </p>
+    <section id="ayudarte" className="py-24 px-[6vw] bg-pink-bg">
+      <div className="mb-14">
+        <div className="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-wine-light mb-3">
+          En qué puedo ayudarte
         </div>
+        <h2 className="font-playfair text-clamp-title font-black text-wine-dark leading-tight mb-3">
+          ¿Esto te suena familiar?
+        </h2>
+        <div className="w-12 h-[3px] rounded-full bg-wine-light"></div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {serviceItems.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 group"
-            >
-              <div className={`w-14 h-14 rounded-full ${service.color} text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-primary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {service.desc}
-              </p>
-            </motion.div>
+      <div className="bg-white rounded-[20px] p-8 md:p-10 mb-12 border-l-4 border-wine-light shadow-sm">
+        <div className="font-playfair text-xl font-bold text-wine-dark mb-4">
+          Si marcas alguno de estos, estás en el lugar correcto 👇
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+          {painPoints.map((point, idx) => (
+            <div key={idx} className="flex items-start gap-3 text-[0.88rem] text-text-medium">
+              <span className="text-wine-light font-bold flex-shrink-0">→</span>
+              {point}
+            </div>
           ))}
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {serviceCards.map((card, idx) => (
+          <div key={idx} className="group bg-white rounded-[18px] p-7 border border-wine/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-wine/12 relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-wine-light to-pink opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="w-11 h-11 rounded-xl bg-pink-light flex items-center justify-center text-xl mb-4">
+              {card.icon}
+            </div>
+            <div className="font-playfair text-lg font-bold text-wine-dark mb-2">
+              {card.name}
+            </div>
+            <p className="text-[0.82rem] leading-relaxed text-text-medium mb-4">
+              {card.desc}
+            </p>
+            <span className="inline-block text-[0.7rem] font-semibold text-wine-light bg-pink-bg px-3 py-1 rounded-full">
+              {card.tag}
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   );

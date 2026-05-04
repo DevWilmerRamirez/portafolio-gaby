@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADS by Gaby · Paid Media Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --wine:    #6B1A2A;
+  --wine-d:  #4A1020;
+  --wine-l:  #8C2238;
+  --pink:    #E8A0A8;
+  --pink-l:  #F5D5D9;
+  --pink-bg: #FBF0F1;
+  --cream:   #FDF7F0;
+  --white:   #FFFFFF;
+  --text:    #2A0A12;
+  --text-m:  #7A3040;
+  --text-l:  #B06070;
+  --border:  rgba(107,26,42,0.15);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+
+/* ── NAV ─────────────────────────────────────────────────────────── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,247,240,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 6vw;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--wine);letter-spacing:-0.01em;}
+.nav-logo span{color:var(--pink);}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--text-m);text-decoration:none;letter-spacing:.02em;transition:color .2s;}
+.nav-links a:hover{color:var(--wine);}
+.nav-cta{background:var(--wine);color:#fff;font-size:.82rem;font-weight:600;padding:.55rem 1.25rem;border-radius:100px;text-decoration:none;letter-spacing:.02em;transition:background .2s,transform .15s;}
+.nav-cta:hover{background:var(--wine-d);transform:translateY(-1px);}
+
+/* ── HERO ─────────────────────────────────────────────────────────── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:100px 6vw 60px;gap:4rem;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 40%,var(--pink-l) 0%,transparent 60%);pointer-events:none;}
+.hero-text{position:relative;z-index:1;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--pink-l);border:1px solid var(--pink);border-radius:100px;padding:.35rem 1rem;font-size:.78rem;font-weight:600;color:var(--wine);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.5rem;animation:fadeUp .7s ease both;}
+.hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--wine);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:900;line-height:1.1;letter-spacing:-.02em;color:var(--wine-d);margin-bottom:1rem;animation:fadeUp .7s .1s ease both;}
+.hero h1 em{font-style:normal;color:var(--wine-l);}
+.hero-sub{font-size:1rem;line-height:1.7;color:var(--text-m);max-width:480px;margin-bottom:2rem;animation:fadeUp .7s .2s ease both;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;animation:fadeUp .7s .3s ease both;}
+.btn-primary{background:var(--wine);color:#fff;padding:.8rem 1.8rem;border-radius:100px;font-size:.9rem;font-weight:600;text-decoration:none;transition:all .2s;}
+.btn-primary:hover{background:var(--wine-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(107,26,42,.3);}
+.btn-secondary{border:1.5px solid var(--wine);color:var(--wine);padding:.8rem 1.8rem;border-radius:100px;font-size:.9rem;font-weight:600;text-decoration:none;transition:all .2s;}
+.btn-secondary:hover{background:var(--pink-l);}
+.hero-stats{display:flex;gap:2rem;animation:fadeUp .7s .4s ease both;}
+.stat{text-align:center;}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--wine);line-height:1;}
+.stat-label{font-size:.72rem;color:var(--text-l);font-weight:500;letter-spacing:.03em;margin-top:.2rem;}
+.stat-div{width:1px;background:var(--border);align-self:stretch;}
+
+.hero-visual{position:relative;z-index:1;display:flex;justify-content:center;animation:fadeUp .8s .2s ease both;}
+.hero-card{background:var(--white);border-radius:24px;padding:2rem;box-shadow:0 24px 80px rgba(107,26,42,.18);max-width:340px;width:100%;position:relative;}
+.hero-card::before{content:'';position:absolute;inset:-2px;border-radius:26px;background:linear-gradient(135deg,var(--pink) 0%,transparent 60%);z-index:-1;}
+.hero-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--wine-l),var(--wine-d));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.8rem;color:#fff;font-weight:700;margin-bottom:1rem;}
+.hero-card-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--wine-d);margin-bottom:.2rem;}
+.hero-card-role{font-size:.78rem;color:var(--text-l);margin-bottom:1.2rem;}
+.hero-metrics{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.2rem;}
+.metric-pill{background:var(--pink-bg);border-radius:12px;padding:.6rem .8rem;}
+.metric-pill-num{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--wine);}
+.metric-pill-desc{font-size:.68rem;color:var(--text-l);line-height:1.3;margin-top:.1rem;}
+.hero-markets{display:flex;gap:.4rem;flex-wrap:wrap;}
+.market-tag{background:var(--wine);color:#fff;font-size:.68rem;font-weight:600;padding:.2rem .7rem;border-radius:100px;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── SECTIONS SHARED ───────────────────────────────────────────────── */
+section{padding:90px 6vw;}
+.section-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--wine-l);margin-bottom:.75rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;color:var(--wine-d);line-height:1.15;margin-bottom:.75rem;}
+.section-sub{font-size:.95rem;color:var(--text-m);line-height:1.7;max-width:540px;}
+.section-header{margin-bottom:3.5rem;}
+.accent-line{width:48px;height:3px;border-radius:2px;background:var(--wine-l);margin-top:1rem;}
+
+/* ── QUIEN SOY ─────────────────────────────────────────────────────── */
+.quien{background:var(--white);}
+.quien-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:center;}
+.quien-photo-wrap{position:relative;}
+.quien-photo{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,var(--pink-l) 0%,var(--wine-l) 100%);border-radius:20px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:5rem;color:rgba(255,255,255,.3);overflow:hidden;position:relative;}
+.quien-photo-label{position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;background:rgba(255,255,255,.95);border-radius:12px;padding:1rem 1.2rem;}
+.quien-photo-label-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--wine-d);}
+.quien-photo-label-role{font-size:.75rem;color:var(--text-l);margin-top:.1rem;}
+.quien-badge{position:absolute;top:1.5rem;right:-1.5rem;background:var(--wine);color:#fff;border-radius:14px;padding:.8rem 1rem;font-size:.75rem;font-weight:600;text-align:center;box-shadow:0 8px 24px rgba(107,26,42,.3);}
+.quien-badge-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;display:block;}
+
+.quien-content p{font-size:.95rem;line-height:1.8;color:var(--text-m);margin-bottom:1rem;}
+.quien-content p strong{color:var(--wine-d);}
+.quien-highlights{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:2rem 0;}
+.highlight-item{background:var(--pink-bg);border-left:3px solid var(--wine-l);border-radius:0 10px 10px 0;padding:.75rem 1rem;}
+.highlight-item-title{font-size:.8rem;font-weight:600;color:var(--wine-d);margin-bottom:.2rem;}
+.highlight-item-desc{font-size:.75rem;color:var(--text-l);line-height:1.4;}
+
+/* ── AYUDARTE ─────────────────────────────────────────────────────── */
+.ayudarte{background:var(--pink-bg);}
+.pain-intro{background:var(--white);border-radius:20px;padding:2rem 2.5rem;margin-bottom:3rem;border-left:4px solid var(--wine-l);}
+.pain-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--wine-d);margin-bottom:1rem;}
+.pain-list{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}
+.pain-item{display:flex;align-items:flex-start;gap:.6rem;font-size:.88rem;color:var(--text-m);}
+.pain-arrow{color:var(--wine-l);font-weight:700;flex-shrink:0;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;}
+.service-card{background:var(--white);border-radius:18px;padding:1.75rem;border:1px solid var(--border);transition:all .25s;position:relative;overflow:hidden;}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--wine-l),var(--pink));}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(107,26,42,.12);}
+.service-icon{width:44px;height:44px;border-radius:12px;background:var(--pink-l);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.1rem;}
+.service-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--wine-d);margin-bottom:.5rem;}
+.service-desc{font-size:.82rem;line-height:1.65;color:var(--text-m);}
+.service-tag{display:inline-block;margin-top:.8rem;font-size:.7rem;font-weight:600;color:var(--wine-l);background:var(--pink-bg);padding:.2rem .7rem;border-radius:100px;}
+
+/* ── RESULTADOS ────────────────────────────────────────────────────── */
+.resultados{background:var(--wine-d);position:relative;overflow:hidden;}
+.resultados::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 80% 50%,rgba(232,160,168,.1) 0%,transparent 60%);}
+.resultados .section-eyebrow{color:var(--pink);}
+.resultados .section-title{color:#fff;}
+.resultados .accent-line{background:var(--pink);}
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;position:relative;z-index:1;}
+.metric-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:1.75rem;text-align:center;backdrop-filter:blur(8px);transition:all .25s;}
+.metric-card:hover{background:rgba(255,255,255,.12);transform:translateY(-4px);}
+.metric-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:var(--pink);line-height:1;margin-bottom:.4rem;}
+.metric-label{font-size:.8rem;color:rgba(255,255,255,.7);line-height:1.5;}
+.metric-context{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.4rem;font-style:italic;}
+
+/* ── EXPERIENCIA (TIMELINE) ────────────────────────────────────────── */
+.experiencia{background:var(--cream);}
+.timeline{position:relative;padding-left:2rem;}
+.timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--wine-l),var(--pink));}
+.timeline-item{position:relative;padding:0 0 2.5rem 2.5rem;opacity:0;transform:translateX(-20px);transition:all .5s ease;}
+.timeline-item.visible{opacity:1;transform:translateX(0);}
+.timeline-dot{position:absolute;left:-2rem;top:.3rem;width:1rem;height:1rem;border-radius:50%;background:var(--wine-l);border:3px solid var(--cream);box-shadow:0 0 0 2px var(--wine-l);}
+.timeline-dot.current{background:var(--pink);box-shadow:0 0 0 2px var(--pink),0 0 12px var(--pink);}
+.timeline-date{font-size:.72rem;font-weight:700;color:var(--wine-l);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem;}
+.timeline-company{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--wine-d);margin-bottom:.2rem;}
+.timeline-role{font-size:.82rem;font-weight:600;color:var(--text-m);margin-bottom:.6rem;}
+.timeline-desc{font-size:.82rem;line-height:1.65;color:var(--text-l);max-width:560px;}
+.timeline-results{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.7rem;}
+.timeline-result{background:var(--pink-l);border-radius:100px;font-size:.7rem;font-weight:600;color:var(--wine-d);padding:.2rem .75rem;}
+.timeline-current-badge{display:inline-flex;align-items:center;gap:.3rem;background:var(--wine);color:#fff;font-size:.65rem;font-weight:700;padding:.2rem .65rem;border-radius:100px;margin-bottom:.5rem;letter-spacing:.04em;}
+.timeline-dot-blink{width:6px;height:6px;border-radius:50%;background:#fff;animation:blink 1.5s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* ── PORTAFOLIO ─────────────────────────────────────────────────────── */
+.portafolio{background:var(--white);}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+.portfolio-card{border-radius:20px;overflow:hidden;border:1px solid var(--border);transition:all .25s;position:relative;}
+.portfolio-card:hover{transform:translateY(-5px);box-shadow:0 20px 60px rgba(107,26,42,.15);}
+.portfolio-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;}
+.portfolio-body{padding:1.5rem;}
+.portfolio-industry{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--wine-l);margin-bottom:.4rem;}
+.portfolio-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--wine-d);margin-bottom:.5rem;}
+.portfolio-desc{font-size:.8rem;line-height:1.6;color:var(--text-m);margin-bottom:1rem;}
+.portfolio-kpis{display:flex;gap:.5rem;flex-wrap:wrap;}
+.kpi{background:var(--pink-bg);border-radius:8px;padding:.3rem .65rem;font-size:.72rem;font-weight:600;color:var(--wine);}
+
+/* ── CAPACITACIONES ─────────────────────────────────────────────────── */
+.capacitaciones{background:var(--pink-bg);}
+.training-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
+.training-card{background:var(--white);border-radius:18px;padding:1.75rem;border:1px solid var(--border);transition:all .25s;}
+.training-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(107,26,42,.1);}
+.training-badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--wine);color:#fff;font-size:.7rem;font-weight:600;padding:.3rem .8rem;border-radius:100px;margin-bottom:1rem;}
+.training-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--wine-d);margin-bottom:.4rem;}
+.training-provider{font-size:.78rem;color:var(--wine-l);font-weight:600;margin-bottom:.5rem;}
+.training-desc{font-size:.8rem;line-height:1.6;color:var(--text-m);}
+.training-topics{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.8rem;}
+.topic{background:var(--pink-l);border-radius:100px;font-size:.68rem;color:var(--wine-d);padding:.2rem .65rem;font-weight:500;}
+
+.training-cta-box{background:linear-gradient(135deg,var(--wine-d),var(--wine-l));border-radius:20px;padding:2.5rem;margin-top:2.5rem;text-align:center;position:relative;overflow:hidden;}
+.training-cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 20%,rgba(232,160,168,.2) 0%,transparent 60%);}
+.training-cta-box h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.5rem;position:relative;z-index:1;}
+.training-cta-box p{font-size:.88rem;color:rgba(255,255,255,.7);margin-bottom:1.5rem;position:relative;z-index:1;}
+.training-cta-box a{background:var(--pink);color:var(--wine-d);font-size:.88rem;font-weight:700;padding:.75rem 1.75rem;border-radius:100px;text-decoration:none;display:inline-block;transition:all .2s;position:relative;z-index:1;}
+.training-cta-box a:hover{background:#fff;transform:translateY(-2px);}
+
+/* ── CTA FINAL ─────────────────────────────────────────────────────── */
+.cta-final{background:var(--wine-d);text-align:center;padding:100px 6vw;position:relative;overflow:hidden;}
+.cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(232,160,168,.12) 0%,transparent 60%);}
+.cta-final h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;margin-bottom:1rem;position:relative;z-index:1;}
+.cta-final h2 em{font-style:normal;color:var(--pink);}
+.cta-final p{font-size:1rem;color:rgba(255,255,255,.65);max-width:480px;margin:0 auto 2.5rem;line-height:1.7;position:relative;z-index:1;}
+.cta-final-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.btn-pink{background:var(--pink);color:var(--wine-d);font-weight:700;padding:.9rem 2rem;border-radius:100px;font-size:.95rem;text-decoration:none;transition:all .2s;}
+.btn-pink:hover{background:#fff;transform:translateY(-2px);}
+.btn-outline-white{border:1.5px solid rgba(255,255,255,.3);color:#fff;padding:.9rem 2rem;border-radius:100px;font-size:.95rem;text-decoration:none;transition:all .2s;}
+.btn-outline-white:hover{border-color:var(--pink);color:var(--pink);}
+
+/* ── FOOTER ─────────────────────────────────────────────────────────── */
+footer{background:var(--wine-d);border-top:1px solid rgba(255,255,255,.08);padding:2rem 6vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap;gap:1rem;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;font-weight:700;}
+.footer-logo span{color:var(--pink);}
+.footer-links{display:flex;gap:1.5rem;}
+.footer-links a{font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--pink);}
+.footer-handle{font-size:.78rem;color:var(--pink);font-weight:600;}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────────────── */
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding-top:80px;}
+  .hero-visual{order:-1;}
+  .hero-card{max-width:100%;}
+  .hero-stats{gap:1.2rem;}
+  .quien-grid{grid-template-columns:1fr;}
+  .quien-badge{right:.5rem;}
+  .pain-list{grid-template-columns:1fr;}
+  .quien-highlights{grid-template-columns:1fr;}
+  nav .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">ADS<span>by</span>Gaby</div>
+    <ul class="nav-links">
+      <li><a href="#quien">Quién soy</a></li>
+      <li><a href="#ayudarte">Servicios</a></li>
+      <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#capacitaciones">Capacitaciones</a></li>
+    </ul>
+    <a href="#contacto" class="nav-cta">Agendar llamada</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Disponible para nuevos proyectos
+    </div>
+    <h1>Tu inversión<br>en ADS debe<br><em>generar resultados.</em></h1>
+    <p class="hero-sub">Paid Media Specialist con +6 años de experiencia en Meta Ads y Google Ads para empresas en Chile, EEUU y Latinoamérica. Estrategia basada en datos, potenciada por IA. 🤓</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">Agenda una llamada gratuita</a>
+      <a href="#ayudarte" class="btn-secondary">Ver servicios</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">+6</div>
+        <div class="stat-label">años de experiencia</div>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <div class="stat-num">+20</div>
+        <div class="stat-label">clientes gestionados</div>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">mercados globales</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="hero-avatar">G</div>
+      <div class="hero-card-name">María Gabriela Bravo</div>
+      <div class="hero-card-role">Paid Media Specialist · @ADSbyGaby</div>
+      <div class="hero-metrics">
+        <div class="metric-pill">
+          <div class="metric-pill-num">-50%</div>
+          <div class="metric-pill-desc">Reducción de CAC en turismo Chile</div>
+        </div>
+        <div class="metric-pill">
+          <div class="metric-pill-num">20%</div>
+          <div class="metric-pill-desc">Conversión Open House EEUU</div>
+        </div>
+        <div class="metric-pill">
+          <div class="metric-pill-num">+30%</div>
+          <div class="metric-pill-desc">Tráfico calificado inmobiliario</div>
+        </div>
+        <div class="metric-pill">
+          <div class="metric-pill-num">Magna</div>
+          <div class="metric-pill-desc">Cum Laude · RRPP</div>
+        </div>
+      </div>
+      <div class="hero-markets">
+        <span class="market-tag">🇻🇪 Venezuela</span>
+        <span class="market-tag">🇨🇱 Chile</span>
+        <span class="market-tag">🇺🇸 EEUU</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIÉN SOY -->
+<section class="quien" id="quien">
+  <div class="quien-grid">
+    <div class="quien-photo-wrap">
+      <div class="quien-photo">
+        <span style="font-family:'Playfair Display',serif;font-size:7rem;color:rgba(255,255,255,.15);user-select:none;">G</span>
+        <div class="quien-photo-label">
+          <div class="quien-photo-label-name">María Gabriela Bravo</div>
+          <div class="quien-photo-label-role">Licenciada en RRPP · Paid Media Specialist</div>
+        </div>
+      </div>
+      <div class="quien-badge">
+        <span class="quien-badge-num">Magna</span>
+        Cum Laude
+      </div>
+    </div>
+    <div class="quien-content">
+      <div class="section-eyebrow">Quién soy</div>
+      <h2 class="section-title">Hola, soy Gaby 🙋🏼‍♀️</h2>
+      <div class="accent-line" style="margin-bottom:1.5rem;"></div>
+      <p>Llegué al mundo digital sin planearlo. Me gradué <strong>Magna Cum Laude en Relaciones Públicas</strong> con un plan muy claro en mente: agencia de RR.PP. clásica. Punto.</p>
+      <p>Pero antes de graduarme, una profesora que me cambió la vida me propuso ser Community Manager para unos abogados. Yo, que nunca fui muy farandulera — y sigo sin serlo, por eso casi siempre se me olvida tomarme fotos con clientes 📸😅 — dije que sí. Sin saber nada. Absolutamente nada.</p>
+      <p>Hoy llevo <strong>más de 6 años</strong> diseñando estrategias de Paid Media para empresas en Venezuela, Chile y Estados Unidos. Disfruto pelear con Meta para recuperar cuentas 😤 y celebrar cada vez que el costo de conversión cae donde debe.</p>
+      <div class="quien-highlights">
+        <div class="highlight-item">
+          <div class="highlight-item-title">Meta Ads + Google Ads</div>
+          <div class="highlight-item-desc">Campañas orientadas a conversión y ROI real</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-item-title">IA aplicada al Paid Media</div>
+          <div class="highlight-item-desc">Advantage+, automatización y optimización</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-item-title">Mercados globales</div>
+          <div class="highlight-item-desc">Chile, EEUU, Venezuela — culturas distintas</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-item-title">Liderazgo de equipos</div>
+          <div class="highlight-item-desc">Fundadora y directora de agencia creativa</div>
+        </div>
+      </div>
+      <a href="#contacto" class="btn-primary">Hablemos 👋</a>
+    </div>
+  </div>
+</section>
+
+<!-- EN QUÉ PUEDO AYUDARTE -->
+<section class="ayudarte" id="ayudarte">
+  <div class="section-header">
+    <div class="section-eyebrow">En qué puedo ayudarte</div>
+    <h2 class="section-title">¿Esto te suena familiar?</h2>
+    <div class="accent-line"></div>
+  </div>
+  <div class="pain-intro">
+    <div class="pain-title">Si marcas alguno de estos, estás en el lugar correcto 👇</div>
+    <div class="pain-list">
+      <div class="pain-item"><span class="pain-arrow">→</span> Inviertes en ADS pero no ves el retorno esperado</div>
+      <div class="pain-item"><span class="pain-arrow">→</span> Tu costo por resultado sube y no sabes por qué</div>
+      <div class="pain-item"><span class="pain-arrow">→</span> Tienes campañas activas pero sin estrategia real</div>
+      <div class="pain-item"><span class="pain-arrow">→</span> Quieres escalar pero no sabes por dónde empezar</div>
+      <div class="pain-item"><span class="pain-arrow">→</span> Mides impresiones pero no conversiones reales</div>
+      <div class="pain-item"><span class="pain-arrow">→</span> Tu equipo no tiene claridad sobre qué métricas importan</div>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <div class="service-name">Gestión de campañas</div>
+      <div class="service-desc">Meta Ads y Google Ads con estrategia, ejecución y optimización continua. Cada peso invertido debe trabajar de verdad.</div>
+      <span class="service-tag">Meta Ads · Google Ads</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔍</div>
+      <div class="service-name">Auditoría publicitaria</div>
+      <div class="service-desc">Revisión completa de tus campañas actuales. Identifico exactamente qué falla y qué oportunidades estás dejando pasar.</div>
+      <span class="service-tag">Diagnóstico completo</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎯</div>
+      <div class="service-name">Consultoría estratégica</div>
+      <div class="service-desc">Sesión 1:1 para definir tu estrategia de pauta, presupuesto óptimo y métricas de éxito alineadas a tu negocio.</div>
+      <span class="service-tag">Sesión 1:1</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🚀</div>
+      <div class="service-name">Mentoría en ADS</div>
+      <div class="service-desc">Acompaño a tu equipo para que aprenda a gestionar y optimizar sus propias campañas con criterio propio.</div>
+      <span class="service-tag">Equipos y freelancers</span>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="resultados" id="resultados">
+  <div class="section-header">
+    <div class="section-eyebrow">Resultados reales</div>
+    <h2 class="section-title" style="color:#fff;">Números que hablan<br>por sí solos</h2>
+    <div class="accent-line" style="background:var(--pink);"></div>
+  </div>
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-num">-50%</div>
+      <div class="metric-label">Reducción de costo por resultado</div>
+      <div class="metric-context">Turismo · Chile · Elite Travel</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">20%</div>
+      <div class="metric-label">Conversión recordatorio → asistencia</div>
+      <div class="metric-context">Inmobiliario · EEUU · Sunbeltus</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">+30%</div>
+      <div class="metric-label">Tráfico calificado generado</div>
+      <div class="metric-context">Sector inmobiliario · EEUU</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">+20</div>
+      <div class="metric-label">Clientes gestionados simultáneamente</div>
+      <div class="metric-context">Venezuela · EEUU · DygitalBrand</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCIA / TIMELINE -->
+<section class="experiencia" id="experiencia">
+  <div class="section-header">
+    <div class="section-eyebrow">Experiencia</div>
+    <h2 class="section-title">Mi camino en<br>el mundo digital</h2>
+    <div class="accent-line"></div>
+  </div>
+  <div class="timeline">
+
+    <div class="timeline-item" data-delay="0">
+      <div class="timeline-dot current"></div>
+      <div class="timeline-current-badge"><span class="timeline-dot-blink"></span> Actualmente</div>
+      <div class="timeline-date">Jun 2025 · Presente</div>
+      <div class="timeline-company">Elite Travel</div>
+      <div class="timeline-role">Paid Media Specialist · Chile / Remoto</div>
+      <div class="timeline-desc">Optimización de campañas de turismo en Meta Ads. Implementación de Ventas Advantage+ con las últimas actualizaciones para maximizar rendimiento y reducir costos.</div>
+      <div class="timeline-results">
+        <span class="timeline-result">CAC -50% (900→300 CLP)</span>
+        <span class="timeline-result">Advantage+</span>
+        <span class="timeline-result">Turismo</span>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-delay="100">
+      <div class="timeline-dot current"></div>
+      <div class="timeline-current-badge"><span class="timeline-dot-blink"></span> Actualmente</div>
+      <div class="timeline-date">Feb 2025 · Presente</div>
+      <div class="timeline-company">Sunbeltus</div>
+      <div class="timeline-role">Paid Media Specialist · EEUU / Remoto</div>
+      <div class="timeline-desc">Diseño y ejecución de campañas de reconocimiento y eventos (Open House) en Meta Ads para el mercado inmobiliario americano. Segmentación ultra precisa para perfil de comprador en EEUU.</div>
+      <div class="timeline-results">
+        <span class="timeline-result">20% conversión Open House</span>
+        <span class="timeline-result">+30% tráfico</span>
+        <span class="timeline-result">Inmobiliario EEUU</span>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-delay="200">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Ene 2024 · Ene 2025</div>
+      <div class="timeline-company">Colortrasnfer</div>
+      <div class="timeline-role">Mentora en Meta ADS · Venezuela</div>
+      <div class="timeline-desc">Mentoría in situ enfocada en resolución de problemas de configuración, corrección de incidencias en campañas y actualización del equipo en nuevas funcionalidades como Advantage+.</div>
+      <div class="timeline-results">
+        <span class="timeline-result">Mentoría</span>
+        <span class="timeline-result">Artes Gráficas</span>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-delay="300">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Ene 2019 · Dic 2024</div>
+      <div class="timeline-company">DygitalBrand · Agencia Creativa</div>
+      <div class="timeline-role">Fundadora & Directora de Estrategia</div>
+      <div class="timeline-desc">Fundé y lideré la agencia desde cero. Definí visión, crecimiento y gestioné todas las operaciones — social media, campañas, administración. Meta/Google Ads para más de 20 clientes en EEUU y Venezuela.</div>
+      <div class="timeline-results">
+        <span class="timeline-result">+20 clientes</span>
+        <span class="timeline-result">EEUU + Venezuela</span>
+        <span class="timeline-result">5 años</span>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-delay="400">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2014 · 2018</div>
+      <div class="timeline-company">IUDERP · Instituto de Relaciones Públicas</div>
+      <div class="timeline-role">Licenciatura en Relaciones Públicas</div>
+      <div class="timeline-desc">Base académica en comunicación estratégica, gestión de marca y relaciones institucionales. El punto de partida que lo cambió todo.</div>
+      <div class="timeline-results">
+        <span class="timeline-result">Magna Cum Laude</span>
+        <span class="timeline-result">Caracas, Venezuela</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTAFOLIO -->
+<section class="portafolio" id="portafolio">
+  <div class="section-header">
+    <div class="section-eyebrow">Portafolio</div>
+    <h2 class="section-title">Casos que generaron<br>resultados reales</h2>
+    <div class="accent-line"></div>
+  </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <div class="portfolio-img" style="background:linear-gradient(135deg,#FBF0F1,#E8A0A8);">✈️</div>
+      <div class="portfolio-body">
+        <div class="portfolio-industry">Turismo · Chile</div>
+        <div class="portfolio-title">Elite Travel — Reducción de CAC a la mitad</div>
+        <div class="portfolio-desc">Optimización de campañas de turismo en Meta Ads. Ajustes de puja, segmentación precisa y creatividades optimizadas con Advantage+.</div>
+        <div class="portfolio-kpis">
+          <span class="kpi">CAC: 900→300 CLP</span>
+          <span class="kpi">Meta Ads</span>
+          <span class="kpi">Advantage+</span>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-img" style="background:linear-gradient(135deg,#F5D5D9,#6B1A2A);">🏠</div>
+      <div class="portfolio-body">
+        <div class="portfolio-industry">Inmobiliario · EEUU</div>
+        <div class="portfolio-title">Sunbeltus — Open House con 20% de conversión</div>
+        <div class="portfolio-desc">Campañas de reconocimiento y recordatorio de eventos inmobiliarios. Segmentación precisa para el perfil comprador americano.</div>
+        <div class="portfolio-kpis">
+          <span class="kpi">20% conversión</span>
+          <span class="kpi">+30% tráfico</span>
+          <span class="kpi">Meta Ads</span>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-img" style="background:linear-gradient(135deg,#E8A0A8,#4A1020);">🎨</div>
+      <div class="portfolio-body">
+        <div class="portfolio-industry">Múltiples industrias · Venezuela + EEUU</div>
+        <div class="portfolio-title">DygitalBrand — +20 clientes, 2 mercados</div>
+        <div class="portfolio-desc">Gestión integral de campañas de Meta y Google Ads para marcas de servicios y productos. Crecimiento sostenido de comunidades y ventas.</div>
+        <div class="portfolio-kpis">
+          <span class="kpi">+20 clientes</span>
+          <span class="kpi">Meta + Google Ads</span>
+          <span class="kpi">5 años</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPACITACIONES -->
+<section class="capacitaciones" id="capacitaciones">
+  <div class="section-header">
+    <div class="section-eyebrow">Formación</div>
+    <h2 class="section-title">Aprendo para poder<br>enseñar mejor</h2>
+    <div class="accent-line"></div>
+  </div>
+  <div class="training-grid">
+    <div class="training-card">
+      <div class="training-badge">🏆 Formación destacada</div>
+      <div class="training-title">Taller de Ventas Digitales</div>
+      <div class="training-provider">Vilma Núñez · 2022</div>
+      <div class="training-desc">Capacitación con una de las mayores referentes del marketing digital hispanohablante. Estrategia de ventas, funnel y conversión digital.</div>
+      <div class="training-topics">
+        <span class="topic">Ventas digitales</span>
+        <span class="topic">Funnel</span>
+        <span class="topic">Conversión</span>
+      </div>
+    </div>
+    <div class="training-card">
+      <div class="training-badge">📚 Formación continua</div>
+      <div class="training-title">Marketing Digital · Transforma tu Negocio</div>
+      <div class="training-provider">Benowu · España · 2020</div>
+      <div class="training-desc">Curso completo de marketing digital orientado a resultados de negocio. Estrategia, implementación y medición de campañas digitales.</div>
+      <div class="training-topics">
+        <span class="topic">Marketing digital</span>
+        <span class="topic">Estrategia</span>
+        <span class="topic">Métricas</span>
+      </div>
+    </div>
+    <div class="training-card">
+      <div class="training-badge">🎓 Base académica</div>
+      <div class="training-title">Licenciatura en Relaciones Públicas</div>
+      <div class="training-provider">IUDERP · Venezuela · 2014–2018</div>
+      <div class="training-desc">Formación universitaria en comunicación estratégica y gestión de marca. Graduada Magna Cum Laude — la base que diferencia mi visión comunicacional.</div>
+      <div class="training-topics">
+        <span class="topic">Comunicación</span>
+        <span class="topic">Estrategia de marca</span>
+        <span class="topic">Magna Cum Laude</span>
+      </div>
+    </div>
+  </div>
+  <div class="training-cta-box">
+    <h3>¿Quieres aprender a gestionar tus propias campañas? 🤓</h3>
+    <p>Ofrezco mentorías 1:1 y acompañamiento para equipos que quieran dominar el mundo de los ADS con criterio propio.</p>
+    <a href="#contacto">Quiero la mentoría →</a>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="contacto">
+  <h2>¿Lista para que tu inversión<br>en ADS trabaje de <em>verdad?</em></h2>
+  <p>Agenda una llamada gratuita de 30 minutos. Sin compromiso. Solo conversamos sobre tu negocio y cómo puedo ayudarte a crecer con pauta digital. 🎯</p>
+  <div class="cta-final-actions">
+    <a href="https://calendly.com/adsbygaby" class="btn-pink">Agendar llamada gratuita</a>
+    <a href="https://instagram.com/adsbygaby" class="btn-outline-white">@ADSbyGaby en Instagram</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ADS<span>by</span>Gaby</div>
+  <div class="footer-links">
+    <a href="#quien">Quién soy</a>
+    <a href="#ayudarte">Servicios</a>
+    <a href="#portafolio">Portafolio</a>
+    <a href="#capacitaciones">Formación</a>
+  </div>
+  <div class="footer-handle">@ADSbyGaby · adsbygaby.com</div>
+</footer>
+
+<script>
+// Timeline scroll animation
+const items = document.querySelectorAll('.timeline-item');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const delay = parseInt(e.target.dataset.delay||0);
+      setTimeout(()=>e.target.classList.add('visible'), delay);
+    }
+  });
+},{threshold:0.15});
+items.forEach(i=>observer.observe(i));
+
+// Nav active link
+const sections = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{
+    if(window.scrollY >= s.offsetTop-100) current=s.getAttribute('id');
+  });
+  links.forEach(l=>{
+    l.style.color = l.getAttribute('href')==='#'+current ? 'var(--wine)' : '';
+    l.style.fontWeight = l.getAttribute('href')==='#'+current ? '600' : '';
+  });
+});
+</script>
+</body>
+</html>

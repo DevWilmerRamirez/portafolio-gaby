@@ -1,88 +1,71 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { ExternalLink, Eye, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-
-const staticProjectData = [
-  {
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-  }
-];
 
 const Portfolio = () => {
-  const { t } = useTranslation();
-
-  const projects = (t('portfolio.items', { returnObjects: true }) || []).map((item, index) => ({
-    ...item,
-    ...(staticProjectData[index] || {})
-  }));
+  const projects = [
+    {
+      emoji: '✈️',
+      industry: 'Turismo · Chile',
+      title: 'Elite Travel — Reducción de CAC a la mitad',
+      desc: 'Optimización de campañas de turismo en Meta Ads. Ajustes de puja, segmentación precisa y creatividades optimizadas con Advantage+.',
+      kpis: ['CAC: 900→300 CLP', 'Meta Ads', 'Advantage+'],
+      gradient: 'from-pink-bg to-pink'
+    },
+    {
+      emoji: '🏠',
+      industry: 'Inmobiliario · EEUU',
+      title: 'Sunbeltus — Open House con 20% de conversión',
+      desc: 'Campañas de reconocimiento y recordatorio de eventos inmobiliarios. Segmentación precisa para el perfil comprador americano.',
+      kpis: ['20% conversión', '+30% tráfico', 'Meta Ads'],
+      gradient: 'from-pink-light to-wine'
+    },
+    {
+      emoji: '🎨',
+      industry: 'Múltiples industrias · Venezuela + EEUU',
+      title: 'DygitalBrand — +20 clientes, 2 mercados',
+      desc: 'Gestión integral de campañas de Meta y Google Ads para marcas de servicios y productos. Crecimiento sostenido de comunidades y ventas.',
+      kpis: ['+20 clientes', 'Meta + Google Ads', '5 años'],
+      gradient: 'from-pink to-wine-dark'
+    }
+  ];
 
   return (
-    <section id="portfolio" className="py-20 bg-neutral-50">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-          <div className="max-w-2xl">
-            <span className="text-purple-primary font-bold tracking-wider uppercase text-sm">
-                {t('portfolio.section_badge')}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2 text-wine">
-                {t('portfolio.section_title')}
-            </h2>
-            <p className="text-gray-600 mt-4 text-lg">
-                {t('portfolio.section_desc')}
-            </p>
-          </div>
-          <a href="#" className="hidden md:flex items-center gap-2 text-wine font-bold border-b-2 border-wine pb-1 hover:text-purple-primary hover:border-purple-primary transition-colors">
-            {t('portfolio.view_all')} <ArrowRight size={20} />
-          </a>
+    <section id="portafolio" className="py-24 px-[6vw] bg-white">
+      <div className="mb-14">
+        <div className="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-wine-light mb-3">
+          Portafolio
         </div>
+        <h2 className="font-playfair text-clamp-title font-black text-wine-dark leading-tight mb-3">
+          Casos que generaron<br />resultados reales
+        </h2>
+        <div className="w-12 h-[3px] rounded-full bg-wine-light"></div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer aspect-video"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-wine/90 via-purple-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                <span className="text-purple-200 text-sm font-medium mb-2">{project.category}</span>
-                <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                <div className="flex items-center justify-between">
-                  <span className="text-white font-bold bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
-                    {project.stats}
-                  </span>
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-wine">
-                    <ExternalLink size={20} />
-                  </div>
-                </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project, idx) => (
+          <div key={idx} className="group rounded-[20px] overflow-hidden border border-wine/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-wine/15">
+            <div className={`h-[180px] flex items-center justify-center text-5xl bg-gradient-to-br ${project.gradient} transition-transform duration-500 group-hover:scale-105`}>
+              {project.emoji}
+            </div>
+            <div className="p-6">
+              <div className="text-[0.68rem] font-bold tracking-widest uppercase text-wine-light mb-2">
+                {project.industry}
               </div>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="mt-8 text-center md:hidden">
-           <a href="#" className="inline-flex items-center gap-2 text-wine font-bold border-b-2 border-wine pb-1">
-            {t('portfolio.view_all')} <ArrowRight size={20} />
-          </a>
-        </div>
+              <div className="font-playfair text-lg font-bold text-wine-dark mb-2 leading-snug">
+                {project.title}
+              </div>
+              <p className="text-[0.8rem] leading-relaxed text-text-medium mb-4">
+                {project.desc}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {project.kpis.map((kpi, kIdx) => (
+                  <span key={kIdx} className="bg-pink-bg rounded-lg px-2.5 py-1 text-[0.72rem] font-semibold text-wine">
+                    {kpi}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
