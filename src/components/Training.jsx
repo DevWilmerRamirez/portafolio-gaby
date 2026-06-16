@@ -17,11 +17,11 @@ const Training = () => {
       topics: ['Marketing digital', 'Estrategia', 'Métricas']
     },
     {
-      badge: '🎓 Base académica',
-      title: 'Licenciatura en Relaciones Públicas',
-      provider: 'IUDERP · Venezuela · 2014–2018',
-      desc: 'Formación universitaria en comunicación estratégica y gestión de marca. Graduada Magna Cum Laude — la base que diferencia mi visión comunicacional.',
-      topics: ['Comunicación', 'Estrategia de marca', 'Magna Cum Laude']
+      badge: '🚀 Formación en curso',
+      title: 'Mentoría Más Performance',
+      provider: 'Mónica Franco · Online · Marzo 2026 – Actualidad',
+      desc: 'Mentoría líder en profesionalización de Paid Media, enfocada en sistemas inteligentes de gestión, procesos y dirección estratégica. Optimización basada en métricas de negocio — el mismo estándar que aplican los equipos más top del mercado. IPP',
+      topics: ['Performance', 'Marketing', 'Sistemas de gestión', 'Métricas de negocio']
     }
   ];
 
@@ -71,8 +71,8 @@ const Training = () => {
         <p className="text-[0.88rem] text-white/70 mb-6 relative z-10 max-w-[600px] mx-auto">
           Ofrezco mentorías 1:1 y acompañamiento para equipos que quieran dominar el mundo de los ADS con criterio propio.
         </p>
-        <a 
-          href="#contacto" 
+        <a
+          href="#contacto"
           className="inline-block bg-pink text-wine-dark text-[0.88rem] font-bold px-7 py-3 rounded-full transition-all relative z-10 hover:bg-white hover:-translate-y-0.5"
         >
           Quiero la mentoría →

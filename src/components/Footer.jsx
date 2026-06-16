@@ -1,4 +1,5 @@
 import React from 'react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -19,8 +20,28 @@ const Footer = () => {
         ))}
       </div>
       
-      <div className="text-[0.78rem] text-pink font-semibold">
-        @ADSbyGaby · adsbygaby.com
+      <div className="flex items-center gap-4 text-[0.78rem] text-pink font-semibold">
+        <span>@ADSbyGaby · adsbygaby.com</span>
+        <div className="flex items-center gap-3 border-l border-white/20 pl-4">
+          <a 
+            href="https://www.instagram.com/adsbygaby" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-white/50 hover:text-pink transition-colors p-0.5"
+            aria-label="Instagram"
+          >
+            <Instagram size={16} />
+          </a>
+          <a 
+            href="https://www.linkedin.com/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-white/50 hover:text-pink transition-colors p-0.5"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={16} />
+          </a>
+        </div>
       </div>
     </footer>
   );

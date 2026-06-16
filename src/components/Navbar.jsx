@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -50,12 +51,32 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <a 
-          href="#contacto" 
-          className="bg-wine text-white text-[0.82rem] font-semibold px-5 py-[0.55rem] rounded-full tracking-wide transition-all duration-200 hover:bg-wine-dark hover:-translate-y-px"
-        >
-          Agendar llamada
-        </a>
+        <div className="flex items-center gap-3">
+          <a 
+            href="https://www.instagram.com/adsbygaby" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-text-medium hover:text-wine transition-colors p-1"
+            aria-label="Instagram"
+          >
+            <Instagram size={18} />
+          </a>
+          <a 
+            href="https://www.linkedin.com/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-text-medium hover:text-wine transition-colors p-1"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={18} />
+          </a>
+          <a 
+            href="#contacto" 
+            className="bg-wine text-white text-[0.82rem] font-semibold px-5 py-[0.55rem] rounded-full tracking-wide transition-all duration-200 hover:bg-wine-dark hover:-translate-y-px ml-1"
+          >
+            Agendar llamada
+          </a>
+        </div>
       </div>
     </nav>
   );

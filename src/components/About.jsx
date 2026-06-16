@@ -4,7 +4,7 @@ import gabyAbout from '../assets/Gaby-portafolio-1.jpg';
 const About = () => {
   const highlights = [
     { title: 'Meta Ads + Google Ads', desc: 'Campañas orientadas a conversión y ROI real' },
-    { title: 'IA aplicada al Paid Media', desc: 'Advantage+, automatización y optimización' },
+    { title: 'IA aplicada al Paid Media', desc: 'Advantage+, creatividades y optimización de campañas' },
     { title: 'Mercados globales', desc: 'Chile, EEUU, Venezuela — culturas distintas' },
     { title: 'Liderazgo de equipos', desc: 'Fundadora y directora de agencia creativa' },
   ];
@@ -17,7 +17,7 @@ const About = () => {
             <img 
               src={gabyAbout} 
               alt="María Gabriela Bravo" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover scale-x-[-1]"
             />
             <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-5 shadow-lg">
               <div className="font-playfair text-lg font-bold text-wine-dark">
@@ -42,16 +42,13 @@ const About = () => {
             Hola, soy Gaby 🙋🏼‍♀️
           </h2>
           <div className="w-12 h-[3px] rounded-full bg-wine-light mb-6"></div>
-          
+
           <div className="space-y-4 text-[0.95rem] leading-relaxed text-text-medium mb-8">
             <p>
-              Llegué al mundo digital sin planearlo. Me gradué <strong className="text-wine-dark font-bold">Magna Cum Laude en Relaciones Públicas</strong> con un plan muy claro en mente: agencia de RR.PP. clásica. Punto.
+              Llegué al mundo digital sin planearlo — <strong className="text-wine-dark font-bold">y me quedé</strong>. Fundé y dirigí mi propia agencia creativa por <strong className="text-wine-dark font-bold">5 años</strong>, gestioné <strong className="text-wine-dark font-bold">+20 clientes</strong>, formé equipos en Meta Ads y luego decidí ir más profundo: especializarme en <strong className="text-wine-dark font-bold">Paid Media</strong>.
             </p>
-            <p>
-              Pero antes de graduarme, una profesora que me cambió la vida me propuso ser Community Manager para unos abogados. Yo, que nunca fui muy farandulera — y sigo sin serlo, por eso casi siempre se me olvida tomarme fotos con clientes 📸😅 — dije que sí. Sin saber nada. Absolutamente nada.
-            </p>
-            <p>
-              Hoy llevo <strong className="text-wine-dark font-bold">más de 6 años</strong> diseñando estrategias de Paid Media para empresas en Venezuela, Chile y Estados Unidos. Disfruto pelear con Meta para recuperar cuentas 😤 y celebrar cada vez que el costo de conversión cae donde debe.
+            <p className="font-semibold text-wine">
+              Mi enfoque: estrategia, datos y método. 🎯
             </p>
           </div>
 

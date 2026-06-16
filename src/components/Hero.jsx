@@ -1,17 +1,11 @@
 import React from 'react';
+import gabyHero from '../assets/Gaby-portafolio-3.jpg';
 
 const Hero = () => {
   const stats = [
     { num: '+6', label: 'años de experiencia' },
     { num: '+20', label: 'clientes gestionados' },
     { num: '3', label: 'mercados globales' },
-  ];
-
-  const metrics = [
-    { num: '-50%', desc: 'Reducción de CAC en turismo Chile' },
-    { num: '20%', desc: 'Conversión Open House EEUU' },
-    { num: '+30%', desc: 'Tráfico calificado inmobiliario' },
-    { num: 'Magna', desc: 'Cum Laude · RRPP' },
   ];
 
   return (
@@ -59,37 +53,35 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative z-10 flex justify-center animate-fade-up delay-200">
-        <div className="bg-white rounded-3xl p-8 shadow-2xl shadow-wine/18 max-w-[340px] w-full relative before:absolute before:-inset-[2px] before:rounded-[26px] before:bg-gradient-to-br before:from-pink before:to-transparent before:-z-10">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-wine-light to-wine-dark flex items-center justify-center font-playfair text-3xl text-white font-bold mb-4 shadow-inner">
-            G
-          </div>
-          <div className="font-playfair text-xl font-bold text-wine-dark mb-0.5">
-            María Gabriela Bravo
-          </div>
-          <div className="text-[0.78rem] text-text-light mb-5">
-            Paid Media Specialist · @ADSbyGaby
+      <div className="relative z-10 flex justify-center items-center animate-fade-up delay-200">
+        {/* Background glow and decorative elements */}
+        <div className="absolute w-[120%] h-[120%] -z-10 flex justify-center items-center pointer-events-none">
+          {/* Main glowing orb */}
+          <div className="absolute w-[280px] h-[280px] bg-gradient-to-tr from-pink/25 to-wine-light/15 rounded-full blur-3xl opacity-60 animate-pulse" style={{ animationDuration: '8s' }}></div>
+          {/* Secondary glowing orb */}
+          <div className="absolute w-[220px] h-[220px] bg-gradient-to-bl from-pink-light/35 to-transparent rounded-full blur-2xl translate-x-12 -translate-y-12"></div>
+          {/* Decorative outline circles */}
+          <div className="absolute w-[300px] h-[300px] border border-wine/10 rounded-full"></div>
+          <div className="absolute w-[360px] h-[360px] border border-dashed border-wine/5 rounded-full animate-[spin_120s_linear_infinite]"></div>
+        </div>
+
+        {/* Image Frame */}
+        <div className="relative max-w-[340px] w-full aspect-[4/5] bg-gradient-to-b from-pink-light to-cream rounded-t-[170px] rounded-b-[32px] p-2 shadow-2xl shadow-wine/15 transition-transform duration-500 hover:scale-[1.02]">
+          {/* Inner border/frame */}
+          <div className="w-full h-full rounded-t-[160px] rounded-b-[24px] overflow-hidden border border-wine/10 bg-white relative">
+            <img 
+              src={gabyHero} 
+              alt="María Gabriela Bravo" 
+              className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+            />
+            {/* Soft shadow vignette overlay on the image */}
+            <div className="absolute inset-0 bg-gradient-to-t from-wine-dark/15 via-transparent to-transparent pointer-events-none"></div>
           </div>
           
-          <div className="grid grid-cols-2 gap-3 mb-5">
-            {metrics.map((metric, idx) => (
-              <div key={idx} className="bg-pink-bg rounded-xl p-3">
-                <div className="font-playfair text-lg font-bold text-wine leading-none">
-                  {metric.num}
-                </div>
-                <div className="text-[0.68rem] text-text-light leading-tight mt-0.5">
-                  {metric.desc}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-1.5">
-            {['🇻🇪 Venezuela', '🇨🇱 Chile', '🇺🇸 EEUU'].map((tag, idx) => (
-              <span key={idx} className="bg-wine text-white text-[0.68rem] font-semibold px-3 py-1 rounded-full">
-                {tag}
-              </span>
-            ))}
+          {/* Floating badge/sticker */}
+          <div className="absolute -bottom-2 -right-4 bg-wine text-white rounded-2xl py-2.5 px-4 shadow-xl shadow-wine/25 border border-wine-light/20 transition-transform duration-300 hover:translate-y-[-2px]">
+            <div className="text-[0.65rem] uppercase tracking-wider text-pink font-bold">Paid Media Specialist</div>
+            <div className="font-playfair text-sm font-bold whitespace-nowrap">@ADSbyGaby</div>
           </div>
         </div>
       </div>

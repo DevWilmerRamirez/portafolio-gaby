@@ -22,20 +22,20 @@ const TimelineItem = ({ item, isFirst }) => {
   }, []);
 
   return (
-    <div 
+    <div
       ref={itemRef}
       className="relative pl-10 pb-10 opacity-0 -translate-x-5 transition-all duration-700 ease-out"
     >
       <div className={`absolute left-[-8px] top-1.5 w-4 h-4 rounded-full border-4 border-cream z-10 ${item.current ? 'bg-pink shadow-[0_0_0_2px_#E8A0A8,0_0_12px_#E8A0A8]' : 'bg-wine-light shadow-[0_0_0_2px_#8C2238]'}`}>
       </div>
-      
+
       {item.current && (
         <div className="inline-flex items-center gap-1.5 bg-wine text-white text-[0.65rem] font-bold px-2.5 py-1 rounded-full mb-2 tracking-wide">
           <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
           Actualmente
         </div>
       )}
-      
+
       <div className="text-[0.72rem] font-bold text-wine-light tracking-widest uppercase mb-1.5">
         {item.date}
       </div>
@@ -48,7 +48,7 @@ const TimelineItem = ({ item, isFirst }) => {
       <div className="text-[0.82rem] leading-relaxed text-text-light max-w-[560px] mb-3">
         {item.desc}
       </div>
-      
+
       <div className="flex flex-wrap gap-2">
         {item.results.map((res, idx) => (
           <span key={idx} className="bg-pink-light rounded-full text-[0.7rem] font-semibold text-wine-dark px-3 py-0.5">
@@ -105,25 +105,27 @@ const Timeline = () => {
   ];
 
   return (
-    <section id="experiencia" className="py-24 px-[6vw] bg-cream">
-      <div className="mb-14 flex flex-col items-center text-center">
-        <div className="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-wine-light mb-3">
-          Experiencia
+    <section id="experiencia" className="py-24 px-[6vw] bg-cream flex flex-col items-center">
+      <div className="w-full max-w-2xl flex flex-col items-start">
+        <div className="mb-14 flex flex-col items-start pl-0 md:pl-8">
+          <div className="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-wine-light mb-3">
+            Experiencia
+          </div>
+          <h2 className="font-playfair text-clamp-title font-black text-wine-dark leading-tight mb-3">
+            Mi camino en<br />el mundo digital
+          </h2>
+          <div className="w-12 h-[3px] rounded-full bg-wine-light"></div>
         </div>
-        <h2 className="font-playfair text-clamp-title font-black text-wine-dark leading-tight mb-3">
-          Mi camino en<br />el mundo digital
-        </h2>
-        <div className="w-12 h-[3px] rounded-full bg-wine-light"></div>
-      </div>
 
-      <div className="relative pl-0 md:pl-8">
-        {/* Timeline Line */}
-        <div className="absolute left-0 top-2 bottom-2 w-0.5 bg-gradient-to-b from-wine-light to-pink"></div>
-        
-        <div className="space-y-4">
-          {experiences.map((exp, idx) => (
-            <TimelineItem key={idx} item={exp} isFirst={idx === 0} />
-          ))}
+        <div className="relative pl-0 md:pl-8 w-full">
+          {/* Timeline Line */}
+          <div className="absolute left-0 md:left-8 top-2 bottom-2 w-0.5 bg-gradient-to-b from-wine-light to-pink"></div>
+
+          <div className="space-y-4">
+            {experiences.map((exp, idx) => (
+              <TimelineItem key={idx} item={exp} isFirst={idx === 0} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
