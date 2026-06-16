@@ -71,12 +71,12 @@ const Timeline = () => {
       current: true
     },
     {
-      date: 'Feb 2025 · Presente',
+      date: 'Feb 2025 · Abr 2026',
       company: 'Sunbeltus',
       role: 'Paid Media Specialist · EEUU / Remoto',
       desc: 'Diseño y ejecución de campañas de reconocimiento y eventos (Open House) en Meta Ads para el mercado inmobiliario americano. Segmentación ultra precisa para perfil de comprador en EEUU.',
       results: ['20% conversión Open House', '+30% tráfico', 'Inmobiliario EEUU'],
-      current: true
+      current: false
     },
     {
       date: 'Ene 2024 · Ene 2025',
@@ -106,7 +106,7 @@ const Timeline = () => {
 
   return (
     <section id="experiencia" className="py-24 px-[6vw] bg-cream">
-      <div className="mb-14">
+      <div className="mb-14 flex flex-col items-center text-center">
         <div className="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-wine-light mb-3">
           Experiencia
         </div>

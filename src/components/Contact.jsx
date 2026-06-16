@@ -14,22 +14,14 @@ const Contact = () => {
           Agenda una llamada gratuita de 30 minutos. Sin compromiso. Solo conversamos sobre tu negocio y cómo puedo ayudarte a crecer con pauta digital. 🎯
         </p>
         
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex justify-center">
           <a 
-            href="https://calendly.com/adsbygaby" 
+            href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ158Vmnhy7RJ4tuXGQc_Hb_jeASe5PF5oRqhMv6OKmwryQnEth-lIlrBUw_sb84JxLH7KUI1hYW?gv=true" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-pink text-wine-dark font-bold px-8 py-3.5 rounded-full text-[0.95rem] transition-all hover:bg-white hover:-translate-y-0.5"
+            className="bg-pink text-wine-dark font-bold px-8 py-3.5 rounded-full text-[0.95rem] transition-all hover:bg-white hover:-translate-y-0.5 inline-block text-center shadow-lg hover:shadow-xl"
           >
             Agendar llamada gratuita
-          </a>
-          <a 
-            href="https://instagram.com/adsbygaby" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="border-[1.5px] border-white/30 text-white px-8 py-3.5 rounded-full text-[0.95rem] transition-all hover:border-pink hover:text-pink"
-          >
-            @ADSbyGaby en Instagram
           </a>
         </div>
       </div>

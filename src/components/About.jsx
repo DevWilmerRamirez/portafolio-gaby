@@ -1,4 +1,5 @@
 import React from 'react';
+import gabyAbout from '../assets/Gaby-portafolio-1.jpg';
 
 const About = () => {
   const highlights = [
@@ -12,8 +13,12 @@ const About = () => {
     <section id="quien" className="py-24 px-[6vw] bg-white">
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-20 items-center">
         <div className="relative">
-          <div className="w-full aspect-[3/4] bg-gradient-to-br from-pink-light to-wine-light rounded-[20px] flex items-center justify-center font-playfair text-[5rem] text-white/30 overflow-hidden relative">
-            <span className="select-none text-[7rem] opacity-50">G</span>
+          <div className="w-full aspect-[3/4] bg-gradient-to-br from-pink-light to-wine-light rounded-[20px] overflow-hidden relative">
+            <img 
+              src={gabyAbout} 
+              alt="María Gabriela Bravo" 
+              className="w-full h-full object-cover"
+            />
             <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-5 shadow-lg">
               <div className="font-playfair text-lg font-bold text-wine-dark">
                 María Gabriela Bravo
